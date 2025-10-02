@@ -1,0 +1,4 @@
+.env
+/logs
+/flipkart_product_recommender
+/flipkart_product_recommender.egg-info
