@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-recommender-frontend
+  labels:
+    app: product-recommender-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product-recommender-frontend
+  template:
+    metadata:
+      labels:
+        app: product-recommender-frontend
+    spec:
+      containers:
+      - name: product-recommender-frontend-container
+        image: product_recommender_frontend_image:latest  # Use local image
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 8501
+        envFrom:
+          - secretRef:
+              name: product-recommender-secrets 
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: product-recommender-frontend-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: product-recommender-frontend
+  ports:
+    - protocol: TCP
+      port: 8501
+      targetPort: 8501
