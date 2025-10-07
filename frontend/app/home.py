@@ -50,7 +50,7 @@ def display_products(products_info_list):
 def make_api_request(method: str, endpoint: str, payload: Dict, timeout: int = 10) -> Optional[Dict]:
     """Centralized API request handler with error handling"""
     try:
-        url = f"http://127.0.0.1:8000{endpoint}"
+        url = f"http://product-recommender-backend-service:8000{endpoint}"
         
         if method.upper() == "GET":
             response = requests.get(url, json=payload, timeout=timeout)
