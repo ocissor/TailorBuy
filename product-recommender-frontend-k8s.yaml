@@ -30,10 +30,11 @@ kind: Service
 metadata:
   name: product-recommender-frontend-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: product-recommender-frontend
   ports:
     - protocol: TCP
       port: 8501
       targetPort: 8501
+      NodePort: 30001  # Specify a NodePort for external access
