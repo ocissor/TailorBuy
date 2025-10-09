@@ -12,7 +12,7 @@ password = urllib.parse.quote(password)
 uri = f"{p1}{password}{p2}"
 
 # Create a new client and connect to the server
-client = MongoClient(uri)
+client = MongoClient(uri, tlsAllowInvalidCertificates=True)
 
 # Send a ping to confirm a successful connection
 try:
