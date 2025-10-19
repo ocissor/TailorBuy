@@ -37,4 +37,4 @@ spec:
     - protocol: TCP
       port: 8501
       targetPort: 8501
-      NodePort: 30001  # Specify a NodePort for external access
+      nodePort: 30001  # Specify a NodePort for external access

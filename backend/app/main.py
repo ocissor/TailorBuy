@@ -42,6 +42,7 @@ class VerifyRequest(BaseModel):
 class ChatRequest(BaseModel):
     uuid: str
     user_query: str
+    is_selected_products: Optional[bool] = False
 
 
 app = FastAPI(title="Amazon Product Recommender")
@@ -175,31 +176,36 @@ async def chat_with_agent(chat_request: ChatRequest):
     """Handle chat interaction with the agent"""
     user_query = chat_request.user_query
     conv_uuid = chat_request.uuid
+    is_selected_products = chat_request.is_selected_products    
     
     try:
-        # Get previous messages from cache or database
-        prev_messages = app.state.cache_conversations.get(conv_uuid)
-        
-        if prev_messages is None:
-            # Cache miss - fetch from database
-            conversation = collection.find_one(
-                {"conversation_id": conv_uuid},
-                {"messages": 1, "_id": 0}
-            )
+        if not is_selected_products:
+            # Get previous messages from cache or database
+            prev_messages = app.state.cache_conversations.get(conv_uuid)
             
-            if not conversation:
-                raise HTTPException(status_code=404, detail="Conversation not found")
+            if prev_messages is None:
+                # Cache miss - fetch from database
+                conversation = collection.find_one(
+                    {"conversation_id": conv_uuid},
+                    {"messages": 1, "_id": 0}
+                )
+                
+                if not conversation:
+                    raise HTTPException(status_code=404, detail="Conversation not found")
+                
+                prev_messages = conversation.get('messages', [])
+                app.state.cache_conversations[conv_uuid] = prev_messages
             
-            prev_messages = conversation.get('messages', [])
-            app.state.cache_conversations[conv_uuid] = prev_messages
-        
-        # Format messages efficiently
-        formatted_messages = [
-            HumanMessage(content=msg["content"]) if msg["role"] == "user"
-            else AIMessage(content=msg["content"])
-            for msg in prev_messages
-            if msg["role"] in ["user", "ai"]
-        ]
+            # Format messages efficiently
+            formatted_messages = [
+                HumanMessage(content=msg["content"]) if msg["role"] == "user"
+                else AIMessage(content=msg["content"])
+                for msg in prev_messages
+                if msg["role"] in ["user", "ai"]
+            ]
+        else:
+            formatted_messages = []
+            
         
         # Invoke the graph
         config = {"configurable": {"thread_id": conv_uuid}}
