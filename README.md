@@ -25,6 +25,9 @@
 <img src="https://img.shields.io/badge/OpenAI-412991.svg?style=default&logo=OpenAI&logoColor=white" alt="OpenAI">
 <img src="https://img.shields.io/badge/Pydantic-E92063.svg?style=default&logo=Pydantic&logoColor=white" alt="Pydantic">
 <img src="https://img.shields.io/badge/YAML-CB171E.svg?style=default&logo=YAML&logoColor=white" alt="YAML">
+<img src="https://img.shields.io/badge/MongoDB-4EA94B.svg?style=default&logo=MongoDB&logoColor=white" alt="MongoDB">
+<img src="https://img.shields.io/badge/LangGraph-3C75AF.svg?style=default&logo=LangChain&logoColor=white" alt="LangGraph">
+<img src="https://img.shields.io/badge/Pinecone-0A9396.svg?style=default&logo=Pinecone&logoColor=white" alt="Pinecone">
 
 </div>
 <br>
