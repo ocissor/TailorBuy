@@ -1,261 +1,205 @@
-Absolutely ✅ — here’s the complete **Markdown code** you can directly paste into your `README.md` file:
+// ...existing code...
+
+# TailorBuy
+
+<img src="readmeai/assets/logos/purple.svg" width="30%" alt="Project Logo"/>
+
+Built with: Streamlit, FastAPI, scikit-learn, NumPy, pandas, Plotly, Pytest, Pydantic, OpenAI
+
+Badges:
+- Streamlit • FastAPI • Python • Pytest
 
 ---
 
-````markdown
-<div id="top" align="center">
+## Table of Contents
 
-<img src="readmeai/assets/logos/purple.svg" width="30%" alt="TailorBuy Logo"/>
-
-# 🧵 TailorBuy
-
-<em>AI-Powered Virtual Try-On & Fashion Search Platform</em>
-
----
-
-### 🛠️ Built with the following technologies
-
-<img src="https://img.shields.io/badge/Streamlit-FF4B4B.svg?style=flat&logo=Streamlit&logoColor=white" alt="Streamlit">
-<img src="https://img.shields.io/badge/FastAPI-009688.svg?style=flat&logo=FastAPI&logoColor=white" alt="FastAPI">
-<img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat&logo=Python&logoColor=white" alt="Python">
-<img src="https://img.shields.io/badge/scikit--learn-F7931E.svg?style=flat&logo=scikit-learn&logoColor=white" alt="scikit-learn">
-<img src="https://img.shields.io/badge/pandas-150458.svg?style=flat&logo=pandas&logoColor=white" alt="pandas">
-<img src="https://img.shields.io/badge/NumPy-013243.svg?style=flat&logo=NumPy&logoColor=white" alt="NumPy">
-<img src="https://img.shields.io/badge/Plotly-3F4F75.svg?style=flat&logo=Plotly&logoColor=white" alt="Plotly">
-<img src="https://img.shields.io/badge/OpenAI-412991.svg?style=flat&logo=OpenAI&logoColor=white" alt="OpenAI">
-<img src="https://img.shields.io/badge/Pydantic-E92063.svg?style=flat&logo=Pydantic&logoColor=white" alt="Pydantic">
-<img src="https://img.shields.io/badge/Pytest-0A9EDC.svg?style=flat&logo=Pytest&logoColor=white" alt="Pytest">
-<img src="https://img.shields.io/badge/tqdm-FFC107.svg?style=flat&logo=tqdm&logoColor=black" alt="tqdm">
-<img src="https://img.shields.io/badge/YAML-CB171E.svg?style=flat&logo=YAML&logoColor=white" alt="YAML">
-
-</div>
+- Overview
+- Features
+- Project structure
+- Getting started
+  - Prerequisites
+  - Installation
+  - Running (backend & frontend)
+  - Testing
+- Contributing
+- License
+- Acknowledgments
 
 ---
 
-## 📚 Table of Contents
+## Overview
 
-- [Overview](#overview)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Testing](#testing)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+TailorBuy is a product-recommender prototype with a Streamlit frontend and a FastAPI backend. The backend exposes conversation and chat endpoints and integrates an LLM-based product recommender. The frontend provides an interactive UI to start conversations, ask queries, and view product suggestions.
 
 ---
 
-## 🧩 Overview
+## Features
 
-**TailorBuy** is an AI-powered platform designed for the modern fashion ecosystem.  
-It enables users to:
-- Search for clothing using natural language queries.
-- Try garments and accessories virtually using AI-based visual try-on.
-- Get personalized product recommendations powered by machine learning and vector retrieval.
-
-This project integrates **FastAPI** (backend), **Streamlit** (frontend), and **LangChain/OpenAI APIs** for conversational search, making the shopping experience interactive and intelligent.
-
----
-
-## ✨ Features
-
-- 🗣️ Conversational fashion search using natural language  
-- 🧠 AI-based product recommendation system  
-- 🧍 Virtual try-on system for garments & accessories  
-- 🧩 Modular FastAPI backend with MongoDB integration  
-- 📊 Streamlit-based interactive frontend  
-- 🐳 Dockerized setup for full-stack deployment  
-- ☁️ Kubernetes manifests for scalable deployment  
+- Streamlit-based interactive frontend
+- FastAPI backend with endpoints to create/list/delete conversations and chat with the recommender
+- LLM-based product recommendation pipeline
+- MongoDB persistence for conversation history
+- Data ingestion pipeline with image description support
+- Caching and TTL for short-term conversation state
 
 ---
 
-## 🗂️ Project Structure
+## Project structure
 
-```sh
+Top-level layout (relevant files)
+
+```
 TailorBuy/
 ├── backend/
 │   ├── app/
-│   │   ├── graph.py
-│   │   ├── main.py
+│   │   ├── main.py                     # FastAPI application and endpoints
 │   │   ├── product_recommender_agent.py
-│   │   ├── prompt.py
-│   │   └── state.py
+│   │   ├── graph.py
+│   │   └── ...
 │   ├── database/
-│   │   ├── setup_db.py
-│   │   └── __init__.py
-│   ├── mongodb/
-│   │   ├── create_collection.py
-│   │   └── setup.py
-│   └── utils/
-│       └── logger.py
-│
+│   │   └── setup_db.py
+│   └── mongodb/
+│       ├── setup.py
+│       └── create_collection.py
 ├── frontend/
 │   └── app/
-│       └── home.py
-│
+│       └── home.py                     # Streamlit frontend
 ├── Config/
 │   └── config.py
-│
+├── requirements.txt
+├── setup.py
 ├── Dockerfile.backend
 ├── Dockerfile.frontend
-├── product-recommender-backend-k8s.yaml
-├── product-recommender-frontend-k8s.yaml
-├── requirements.txt
-└── setup.py
-````
+└── README.md
+```
+
+Key files:
+- backend/app/main.py — FastAPI app (endpoints: POST /conversations/new, GET /conversations/{user_identity}, DELETE /conversations/{conversation_id}, POST /chat, GET /health)
+- frontend/app/home.py — Streamlit UI; calls backend and deserializes /chat response
+- backend/app/product_recommender_agent.py — recommendation logic and LLM integration
+- backend/data/process_data.py — ingestion and image description pipeline
+- backend/mongodb/* — MongoDB setup and collection creation
+- Config/config.py — loads environment variables and API keys
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
+
+This workspace runs in a dev container (Ubuntu 24.04.2 LTS). Commands assume you are inside the container at /workspaces/TailorBuy.
 
 ### Prerequisites
 
-Make sure you have the following installed:
+- Python 3.10+ (use the venv in the dev container)
+- pip
+- MongoDB (or a MongoDB connection string)
+- Environment API keys (see Config/config.py)
 
-* **Python ≥ 3.9**
-* **pip** (Python package manager)
-* **Docker** (optional, for containerized setup)
-* **NodePort access / Minikube** (optional, for K8s deployment)
+Environment variables commonly required:
+- PINECONE_API_KEY (if using Pinecone)
+- GEMINI_API_KEY or GOOGLE_API_KEY (LLM / vision APIs)
+- MONGO_DB_URI or MONGO_DB_PASSWORD / related vars (see backend/mongodb/setup.py)
 
----
+### Installation
 
-### 🧭 Installation
+From the workspace root:
 
-Clone the repository and install dependencies:
-
-```bash
-# Clone the repository
-git clone https://github.com/<your-username>/TailorBuy.git
-
-# Navigate into the project directory
-cd TailorBuy
-
-# Install Python dependencies
+```sh
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
----
+If you prefer system Python (dev container already prepared): just run pip install -r requirements.txt.
 
-### ▶️ Usage
+### Configuration
 
-#### **Option 1 — Run Locally**
+Create a .env file or export environment variables required by Config/config.py. Example (.env):
 
-**Run the backend:**
-
-```bash
-cd backend/app
-uvicorn main:app --reload
+```
+PINECONE_API_KEY=your_pinecone_key
+GEMINI_API_KEY=your_gemini_key
+MONGO_DB_URI=mongodb://user:pass@host:port/dbname
 ```
 
-**Run the frontend:**
+Ensure Config/config.py reads env vars (it usually uses python-dotenv if present).
 
-```bash
-cd frontend/app
-streamlit run home.py
+### Running
+
+1) Start the backend (development)
+
+```sh
+uvicorn backend.app.main:app --reload --port 8000
 ```
 
-The frontend will connect to the backend API and serve the interactive interface.
+The FastAPI interactive docs: http://127.0.0.1:8000/docs
 
-#### **Option 2 — Run with Docker**
+2) Start the frontend (Streamlit)
 
-```bash
-# Build images
-docker build -f Dockerfile.backend -t tailorbuy-backend .
-docker build -f Dockerfile.frontend -t tailorbuy-frontend .
-
-# Run containers
-docker run -d -p 8000:8000 tailorbuy-backend
-docker run -d -p 8501:8501 tailorbuy-frontend
+```sh
+streamlit run frontend/app/home.py
 ```
 
-#### **Option 3 — Deploy on Kubernetes**
+Open the URL shown by Streamlit (usually http://localhost:8501 or printed to console).
 
-```bash
-kubectl apply -f product-recommender-backend-k8s.yaml
-kubectl apply -f product-recommender-frontend-k8s.yaml
+Notes:
+- The frontend expects the backend at http://127.0.0.1:8000 by default. If you run the backend on another host/port, update the API base URL in frontend/app/home.py.
+- The /chat endpoint returns a pickled binary object — frontend deserializes it. If calling /chat directly, save output and unpickle in Python.
+
+Example curl usage:
+
+Create a new conversation:
+```sh
+curl -X POST "http://127.0.0.1:8000/conversations/new" \
+  -H "Content-Type: application/json" \
+  -d '{"uuid":"<uuid>","user_identity":"alice"}'
 ```
 
----
-
-### 🧪 Testing
-
-Run tests using **pytest**:
-
-```bash
-pytest
+Chat with the agent (binary response — save to file):
+```sh
+curl -X POST "http://127.0.0.1:8000/chat" \
+  -H "Content-Type: application/json" \
+  -d '{"uuid":"<uuid>","user_query":"looking for blue shirts","is_selected_products":false}' \
+  --output chat_response.pickle
 ```
 
-You can also check code coverage using:
-
-```bash
-pytest --cov=backend
+Unpickle in Python:
+```py
+import pickle
+with open("chat_response.pickle","rb") as f:
+    resp = pickle.load(f)
+print(resp)
 ```
 
----
+## Troubleshooting
 
-## 🗺️ Roadmap
-
-* [x] Conversational product recommender
-* [x] Streamlit-based visual frontend
-* [ ] 3D virtual try-on integration
-* [ ] Multi-user personalization with session storage
-* [ ] Mobile interface for TailorBuy
-
----
-
-## 🤝 Contributing
-
-We welcome contributions!
-
-1. **Fork** the repository
-2. **Create** a new branch
-
-   ```bash
-   git checkout -b feature-name
-   ```
-3. **Commit** your changes
-
-   ```bash
-   git commit -m "Add feature-name"
-   ```
-4. **Push** to your branch
-
-   ```bash
-   git push origin feature-name
-   ```
-5. **Submit** a Pull Request 🎉
+- Connection refused between frontend and backend: ensure backend is running and the base URL in frontend/app/home.py matches backend host/port.
+- MongoDB errors: verify MONGO_DB_URI and check network connectivity to MongoDB instance.
+- Long-running LLM or image description calls: these depend on external API keys and network — watch backend logs while requests are processed.
+- Missing environment variables: Config/config.py will raise errors or default to None; set variables in .env or environment.
 
 ---
 
-## 🪪 License
+## Contributing
 
-This project is licensed under the [MIT License](LICENSE).
+- Fork the repo, create a feature branch, implement changes, run tests, and open a PR.
+- Keep changes scoped and include tests for new behavior.
 
----
-
-## 💜 Acknowledgments
-
-* Built with ❤️ by **Sarthak Batra** and **Shubhankar Sharma**
-* Powered by **FastAPI**, **LangChain**, **Streamlit**, and **OpenAI**
-
----
-
-<div align="right">
-
-[![][back-to-top]](#top)
-
-</div>
-
-[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
-
-```
+Contributing checklist:
+- Run linting and tests
+- Include documentation for new endpoints
+- Keep secrets out of the repository
 
 ---
 
-Would you like me to modify the top section (logo + badges) so it automatically uses your **GitHub repo name and contributors graph** once you tell me your actual GitHub username (e.g., `github.com/sarthakbatra/TailorBuy`)?  
-That will make it fully dynamic and professional.
-```
+## License
+
+Add a LICENSE file appropriate to your project (e.g., MIT). This repo currently has no license file; choose one before publishing.
+
+---
+
+## Acknowledgments
+
+- Project scaffolding and README generation assisted by repository tooling.
+- Thanks to contributors and open-source projects used in this stack.
+
+// ...existing code...
