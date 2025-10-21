@@ -198,27 +198,8 @@ print(resp)
 
 ---
 
-## Contributing
-
-- Fork the repo, create a feature branch, implement changes, run tests, and open a PR.
-- Keep changes scoped and include tests for new behavior.
-
-Contributing checklist:
-- Run linting and tests
-- Include documentation for new endpoints
-- Keep secrets out of the repository
-
----
-
-## License
-
-Add a LICENSE file appropriate to your project (e.g., MIT). This repo currently has no license file; choose one before publishing.
-
----
-
 ## Acknowledgments
 
 - Project scaffolding and README generation assisted by repository tooling.
 - Thanks to contributors and open-source projects used in this stack.
 
-// ...existing code...
