@@ -1,50 +1,47 @@
-<div id="top">
-
-<!-- HEADER STYLE: CLASSIC -->
-<div align="center">
-
-<img src="readmeai/assets/logos/purple.svg" width="30%" style="position: relative; top: 0; right: 0;" alt="Project Logo"/>
-
-# TAILORBUY_TEMP
-
-<em></em>
-
-<!-- BADGES -->
-<!-- local repository, no metadata badges. -->
-
-<em>Built with the tools and technologies:</em>
-
-<img src="https://img.shields.io/badge/Streamlit-FF4B4B.svg?style=default&logo=Streamlit&logoColor=white" alt="Streamlit">
-<img src="https://img.shields.io/badge/scikitlearn-F7931E.svg?style=default&logo=scikit-learn&logoColor=white" alt="scikitlearn">
-<img src="https://img.shields.io/badge/tqdm-FFC107.svg?style=default&logo=tqdm&logoColor=black" alt="tqdm">
-<img src="https://img.shields.io/badge/FastAPI-009688.svg?style=default&logo=FastAPI&logoColor=white" alt="FastAPI">
-<img src="https://img.shields.io/badge/NumPy-013243.svg?style=default&logo=NumPy&logoColor=white" alt="NumPy">
-<img src="https://img.shields.io/badge/Pytest-0A9EDC.svg?style=default&logo=Pytest&logoColor=white" alt="Pytest">
-<br>
-<img src="https://img.shields.io/badge/Python-3776AB.svg?style=default&logo=Python&logoColor=white" alt="Python">
-<img src="https://img.shields.io/badge/Plotly-3F4F75.svg?style=default&logo=Plotly&logoColor=white" alt="Plotly">
-<img src="https://img.shields.io/badge/pandas-150458.svg?style=default&logo=pandas&logoColor=white" alt="pandas">
-<img src="https://img.shields.io/badge/OpenAI-412991.svg?style=default&logo=OpenAI&logoColor=white" alt="OpenAI">
-<img src="https://img.shields.io/badge/Pydantic-E92063.svg?style=default&logo=Pydantic&logoColor=white" alt="Pydantic">
-<img src="https://img.shields.io/badge/YAML-CB171E.svg?style=default&logo=YAML&logoColor=white" alt="YAML">
-
-</div>
-<br>
+Absolutely ✅ — here’s the complete **Markdown code** you can directly paste into your `README.md` file:
 
 ---
 
-## Table of Contents
+````markdown
+<div id="top" align="center">
 
-- [Table of Contents](#table-of-contents)
+<img src="readmeai/assets/logos/purple.svg" width="30%" alt="TailorBuy Logo"/>
+
+# 🧵 TailorBuy
+
+<em>AI-Powered Virtual Try-On & Fashion Search Platform</em>
+
+---
+
+### 🛠️ Built with the following technologies
+
+<img src="https://img.shields.io/badge/Streamlit-FF4B4B.svg?style=flat&logo=Streamlit&logoColor=white" alt="Streamlit">
+<img src="https://img.shields.io/badge/FastAPI-009688.svg?style=flat&logo=FastAPI&logoColor=white" alt="FastAPI">
+<img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat&logo=Python&logoColor=white" alt="Python">
+<img src="https://img.shields.io/badge/scikit--learn-F7931E.svg?style=flat&logo=scikit-learn&logoColor=white" alt="scikit-learn">
+<img src="https://img.shields.io/badge/pandas-150458.svg?style=flat&logo=pandas&logoColor=white" alt="pandas">
+<img src="https://img.shields.io/badge/NumPy-013243.svg?style=flat&logo=NumPy&logoColor=white" alt="NumPy">
+<img src="https://img.shields.io/badge/Plotly-3F4F75.svg?style=flat&logo=Plotly&logoColor=white" alt="Plotly">
+<img src="https://img.shields.io/badge/OpenAI-412991.svg?style=flat&logo=OpenAI&logoColor=white" alt="OpenAI">
+<img src="https://img.shields.io/badge/Pydantic-E92063.svg?style=flat&logo=Pydantic&logoColor=white" alt="Pydantic">
+<img src="https://img.shields.io/badge/Pytest-0A9EDC.svg?style=flat&logo=Pytest&logoColor=white" alt="Pytest">
+<img src="https://img.shields.io/badge/tqdm-FFC107.svg?style=flat&logo=tqdm&logoColor=black" alt="tqdm">
+<img src="https://img.shields.io/badge/YAML-CB171E.svg?style=flat&logo=YAML&logoColor=white" alt="YAML">
+
+</div>
+
+---
+
+## 📚 Table of Contents
+
 - [Overview](#overview)
 - [Features](#features)
 - [Project Structure](#project-structure)
-    - [Project Index](#project-index)
 - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Testing](#testing)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Testing](#testing)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
@@ -52,381 +49,200 @@
 
 ---
 
-## Overview
+## 🧩 Overview
 
+**TailorBuy** is an AI-powered platform designed for the modern fashion ecosystem.  
+It enables users to:
+- Search for clothing using natural language queries.
+- Try garments and accessories virtually using AI-based visual try-on.
+- Get personalized product recommendations powered by machine learning and vector retrieval.
 
+This project integrates **FastAPI** (backend), **Streamlit** (frontend), and **LangChain/OpenAI APIs** for conversational search, making the shopping experience interactive and intelligent.
 
 ---
 
-## Features
+## ✨ Features
 
-<code>❯ REPLACE-ME</code>
+- 🗣️ Conversational fashion search using natural language  
+- 🧠 AI-based product recommendation system  
+- 🧍 Virtual try-on system for garments & accessories  
+- 🧩 Modular FastAPI backend with MongoDB integration  
+- 📊 Streamlit-based interactive frontend  
+- 🐳 Dockerized setup for full-stack deployment  
+- ☁️ Kubernetes manifests for scalable deployment  
 
 ---
 
-## Project Structure
+## 🗂️ Project Structure
 
 ```sh
-└── TailorBuy_Temp/
-    ├── readmeai-gemini.md
-    └── TailorBuy
-        ├── .git
-        ├── .gitignore
-        ├── backend
-        ├── Config
-        ├── Dockerfile.backend
-        ├── Dockerfile.frontend
-        ├── frontend
-        ├── product-recommender-backend-k8s.yaml
-        ├── product-recommender-frontend-k8s.yaml
-        ├── README.md
-        ├── requirements.txt
-        └── setup.py
-```
-
-### Project Index
-
-<details open>
-    <summary><b><code>TAILORBUY_TEMP/</code></b></summary>
-    <!-- __root__ Submodule -->
-    <details>
-        <summary><b>__root__</b></summary>
-        <blockquote>
-            <div class='directory-path' style='padding: 8px 0; color: #666;'>
-                <code><b>⦿ __root__</b></code>
-            <table style='width: 100%; border-collapse: collapse;'>
-            <thead>
-                <tr style='background-color: #f8f9fa;'>
-                    <th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-                    <th style='text-align: left; padding: 8px;'>Summary</th>
-                </tr>
-            </thead>
-            </table>
-        </blockquote>
-    </details>
-    <!-- TailorBuy Submodule -->
-    <details>
-        <summary><b>TailorBuy</b></summary>
-        <blockquote>
-            <div class='directory-path' style='padding: 8px 0; color: #666;'>
-                <code><b>⦿ TailorBuy</b></code>
-            <table style='width: 100%; border-collapse: collapse;'>
-            <thead>
-                <tr style='background-color: #f8f9fa;'>
-                    <th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-                    <th style='text-align: left; padding: 8px;'>Summary</th>
-                </tr>
-            </thead>
-                <tr style='border-bottom: 1px solid #eee;'>
-                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/Dockerfile.backend'>Dockerfile.backend</a></b></td>
-                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                </tr>
-                <tr style='border-bottom: 1px solid #eee;'>
-                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/Dockerfile.frontend'>Dockerfile.frontend</a></b></td>
-                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                </tr>
-                <tr style='border-bottom: 1px solid #eee;'>
-                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/product-recommender-backend-k8s.yaml'>product-recommender-backend-k8s.yaml</a></b></td>
-                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                </tr>
-                <tr style='border-bottom: 1px solid #eee;'>
-                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/product-recommender-frontend-k8s.yaml'>product-recommender-frontend-k8s.yaml</a></b></td>
-                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                </tr>
-                <tr style='border-bottom: 1px solid #eee;'>
-                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/requirements.txt'>requirements.txt</a></b></td>
-                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                </tr>
-                <tr style='border-bottom: 1px solid #eee;'>
-                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/setup.py'>setup.py</a></b></td>
-                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                </tr>
-            </table>
-            <!-- backend Submodule -->
-            <details>
-                <summary><b>backend</b></summary>
-                <blockquote>
-                    <div class='directory-path' style='padding: 8px 0; color: #666;'>
-                        <code><b>⦿ TailorBuy.backend</b></code>
-                    <!-- app Submodule -->
-                    <details>
-                        <summary><b>app</b></summary>
-                        <blockquote>
-                            <div class='directory-path' style='padding: 8px 0; color: #666;'>
-                                <code><b>⦿ TailorBuy.backend.app</b></code>
-                            <table style='width: 100%; border-collapse: collapse;'>
-                            <thead>
-                                <tr style='background-color: #f8f9fa;'>
-                                    <th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-                                    <th style='text-align: left; padding: 8px;'>Summary</th>
-                                </tr>
-                            </thead>
-                                <tr style='border-bottom: 1px solid #eee;'>
-                                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/backend/app/graph.py'>graph.py</a></b></td>
-                                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                                </tr>
-                                <tr style='border-bottom: 1px solid #eee;'>
-                                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/backend/app/main.py'>main.py</a></b></td>
-                                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                                </tr>
-                                <tr style='border-bottom: 1px solid #eee;'>
-                                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/backend/app/product_recommender_agent.py'>product_recommender_agent.py</a></b></td>
-                                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                                </tr>
-                                <tr style='border-bottom: 1px solid #eee;'>
-                                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/backend/app/prompt.py'>prompt.py</a></b></td>
-                                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                                </tr>
-                                <tr style='border-bottom: 1px solid #eee;'>
-                                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/backend/app/state.py'>state.py</a></b></td>
-                                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                                </tr>
-                            </table>
-                        </blockquote>
-                    </details>
-                    <!-- database Submodule -->
-                    <details>
-                        <summary><b>database</b></summary>
-                        <blockquote>
-                            <div class='directory-path' style='padding: 8px 0; color: #666;'>
-                                <code><b>⦿ TailorBuy.backend.database</b></code>
-                            <table style='width: 100%; border-collapse: collapse;'>
-                            <thead>
-                                <tr style='background-color: #f8f9fa;'>
-                                    <th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-                                    <th style='text-align: left; padding: 8px;'>Summary</th>
-                                </tr>
-                            </thead>
-                                <tr style='border-bottom: 1px solid #eee;'>
-                                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/backend/database/setup_db.py'>setup_db.py</a></b></td>
-                                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                                </tr>
-                                <tr style='border-bottom: 1px solid #eee;'>
-                                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/backend/database/_init__.py'>_init__.py</a></b></td>
-                                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                                </tr>
-                            </table>
-                        </blockquote>
-                    </details>
-                    <!-- mongodb Submodule -->
-                    <details>
-                        <summary><b>mongodb</b></summary>
-                        <blockquote>
-                            <div class='directory-path' style='padding: 8px 0; color: #666;'>
-                                <code><b>⦿ TailorBuy.backend.mongodb</b></code>
-                            <table style='width: 100%; border-collapse: collapse;'>
-                            <thead>
-                                <tr style='background-color: #f8f9fa;'>
-                                    <th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-                                    <th style='text-align: left; padding: 8px;'>Summary</th>
-                                </tr>
-                            </thead>
-                                <tr style='border-bottom: 1px solid #eee;'>
-                                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/backend/mongodb/create_collection.py'>create_collection.py</a></b></td>
-                                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                                </tr>
-                                <tr style='border-bottom: 1px solid #eee;'>
-                                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/backend/mongodb/setup.py'>setup.py</a></b></td>
-                                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                                </tr>
-                            </table>
-                        </blockquote>
-                    </details>
-                    <!-- utils Submodule -->
-                    <details>
-                        <summary><b>utils</b></summary>
-                        <blockquote>
-                            <div class='directory-path' style='padding: 8px 0; color: #666;'>
-                                <code><b>⦿ TailorBuy.backend.utils</b></code>
-                            <table style='width: 100%; border-collapse: collapse;'>
-                            <thead>
-                                <tr style='background-color: #f8f9fa;'>
-                                    <th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-                                    <th style='text-align: left; padding: 8px;'>Summary</th>
-                                </tr>
-                            </thead>
-                                <tr style='border-bottom: 1px solid #eee;'>
-                                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/backend/utils/logger.py'>logger.py</a></b></td>
-                                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                                </tr>
-                            </table>
-                        </blockquote>
-                    </details>
-                </blockquote>
-            </details>
-            <!-- Config Submodule -->
-            <details>
-                <summary><b>Config</b></summary>
-                <blockquote>
-                    <div class='directory-path' style='padding: 8px 0; color: #666;'>
-                        <code><b>⦿ TailorBuy.Config</b></code>
-                    <table style='width: 100%; border-collapse: collapse;'>
-                    <thead>
-                        <tr style='background-color: #f8f9fa;'>
-                            <th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-                            <th style='text-align: left; padding: 8px;'>Summary</th>
-                        </tr>
-                    </thead>
-                        <tr style='border-bottom: 1px solid #eee;'>
-                            <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/Config/config.py'>config.py</a></b></td>
-                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                        </tr>
-                    </table>
-                </blockquote>
-            </details>
-            <!-- frontend Submodule -->
-            <details>
-                <summary><b>frontend</b></summary>
-                <blockquote>
-                    <div class='directory-path' style='padding: 8px 0; color: #666;'>
-                        <code><b>⦿ TailorBuy.frontend</b></code>
-                    <!-- app Submodule -->
-                    <details>
-                        <summary><b>app</b></summary>
-                        <blockquote>
-                            <div class='directory-path' style='padding: 8px 0; color: #666;'>
-                                <code><b>⦿ TailorBuy.frontend.app</b></code>
-                            <table style='width: 100%; border-collapse: collapse;'>
-                            <thead>
-                                <tr style='background-color: #f8f9fa;'>
-                                    <th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-                                    <th style='text-align: left; padding: 8px;'>Summary</th>
-                                </tr>
-                            </thead>
-                                <tr style='border-bottom: 1px solid #eee;'>
-                                    <td style='padding: 8px;'><b><a href='/TailorBuy_Temp/TailorBuy/frontend/app/home.py'>home.py</a></b></td>
-                                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-                                </tr>
-                            </table>
-                        </blockquote>
-                    </details>
-                </blockquote>
-            </details>
-        </blockquote>
-    </details>
-</details>
+TailorBuy/
+├── backend/
+│   ├── app/
+│   │   ├── graph.py
+│   │   ├── main.py
+│   │   ├── product_recommender_agent.py
+│   │   ├── prompt.py
+│   │   └── state.py
+│   ├── database/
+│   │   ├── setup_db.py
+│   │   └── __init__.py
+│   ├── mongodb/
+│   │   ├── create_collection.py
+│   │   └── setup.py
+│   └── utils/
+│       └── logger.py
+│
+├── frontend/
+│   └── app/
+│       └── home.py
+│
+├── Config/
+│   └── config.py
+│
+├── Dockerfile.backend
+├── Dockerfile.frontend
+├── product-recommender-backend-k8s.yaml
+├── product-recommender-frontend-k8s.yaml
+├── requirements.txt
+└── setup.py
+````
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-This project requires the following dependencies:
+Make sure you have the following installed:
 
-- **Programming Language:** Python
-- **Package Manager:** Pip
+* **Python ≥ 3.9**
+* **pip** (Python package manager)
+* **Docker** (optional, for containerized setup)
+* **NodePort access / Minikube** (optional, for K8s deployment)
 
-### Installation
+---
 
-Build TailorBuy_Temp from the source and intsall dependencies:
+### 🧭 Installation
 
-1. **Clone the repository:**
+Clone the repository and install dependencies:
 
-    ```sh
-    ❯ git clone ../TailorBuy_Temp
-    ```
+```bash
+# Clone the repository
+git clone https://github.com/<your-username>/TailorBuy.git
 
-2. **Navigate to the project directory:**
+# Navigate into the project directory
+cd TailorBuy
 
-    ```sh
-    ❯ cd TailorBuy_Temp
-    ```
-
-3. **Install the dependencies:**
-
-<!-- SHIELDS BADGE CURRENTLY DISABLED -->
-    <!-- [![pip][pip-shield]][pip-link] -->
-    <!-- REFERENCE LINKS -->
-    <!-- [pip-shield]: https://img.shields.io/badge/Pip-3776AB.svg?style={badge_style}&logo=pypi&logoColor=white -->
-    <!-- [pip-link]: https://pypi.org/project/pip/ -->
-
-    **Using [pip](https://pypi.org/project/pip/):**
-
-    ```sh
-    ❯ pip install -r TailorBuy\requirements.txt
-    ```
-
-### Usage
-
-Run the project with:
-
-**Using [pip](https://pypi.org/project/pip/):**
-```sh
-python {entrypoint}
+# Install Python dependencies
+pip install -r requirements.txt
 ```
 
-### Testing
+---
 
-Tailorbuy_temp uses the {__test_framework__} test framework. Run the test suite with:
+### ▶️ Usage
 
-**Using [pip](https://pypi.org/project/pip/):**
-```sh
+#### **Option 1 — Run Locally**
+
+**Run the backend:**
+
+```bash
+cd backend/app
+uvicorn main:app --reload
+```
+
+**Run the frontend:**
+
+```bash
+cd frontend/app
+streamlit run home.py
+```
+
+The frontend will connect to the backend API and serve the interactive interface.
+
+#### **Option 2 — Run with Docker**
+
+```bash
+# Build images
+docker build -f Dockerfile.backend -t tailorbuy-backend .
+docker build -f Dockerfile.frontend -t tailorbuy-frontend .
+
+# Run containers
+docker run -d -p 8000:8000 tailorbuy-backend
+docker run -d -p 8501:8501 tailorbuy-frontend
+```
+
+#### **Option 3 — Deploy on Kubernetes**
+
+```bash
+kubectl apply -f product-recommender-backend-k8s.yaml
+kubectl apply -f product-recommender-frontend-k8s.yaml
+```
+
+---
+
+### 🧪 Testing
+
+Run tests using **pytest**:
+
+```bash
 pytest
 ```
 
----
+You can also check code coverage using:
 
-## Roadmap
-
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
+```bash
+pytest --cov=backend
+```
 
 ---
 
-## Contributing
+## 🗺️ Roadmap
 
-- **💬 [Join the Discussions](https://LOCAL//TailorBuy_Temp/discussions)**: Share your insights, provide feedback, or ask questions.
-- **🐛 [Report Issues](https://LOCAL//TailorBuy_Temp/issues)**: Submit bugs found or log feature requests for the `TailorBuy_Temp` project.
-- **💡 [Submit Pull Requests](https://LOCAL//TailorBuy_Temp/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
-
-<details closed>
-<summary>Contributing Guidelines</summary>
-
-1. **Fork the Repository**: Start by forking the project repository to your LOCAL account.
-2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
-   ```sh
-   git clone D:/TailorBuy_Temp
-   ```
-3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
-   ```sh
-   git checkout -b new-feature-x
-   ```
-4. **Make Your Changes**: Develop and test your changes locally.
-5. **Commit Your Changes**: Commit with a clear message describing your updates.
-   ```sh
-   git commit -m 'Implemented new feature x.'
-   ```
-6. **Push to LOCAL**: Push the changes to your forked repository.
-   ```sh
-   git push origin new-feature-x
-   ```
-7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
-8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
-</details>
-
-<details closed>
-<summary>Contributor Graph</summary>
-<br>
-<p align="left">
-   <a href="https://LOCAL{//TailorBuy_Temp/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=/TailorBuy_Temp">
-   </a>
-</p>
-</details>
+* [x] Conversational product recommender
+* [x] Streamlit-based visual frontend
+* [ ] 3D virtual try-on integration
+* [ ] Multi-user personalization with session storage
+* [ ] Mobile interface for TailorBuy
 
 ---
 
-## License
+## 🤝 Contributing
 
-Tailorbuy_temp is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+We welcome contributions!
+
+1. **Fork** the repository
+2. **Create** a new branch
+
+   ```bash
+   git checkout -b feature-name
+   ```
+3. **Commit** your changes
+
+   ```bash
+   git commit -m "Add feature-name"
+   ```
+4. **Push** to your branch
+
+   ```bash
+   git push origin feature-name
+   ```
+5. **Submit** a Pull Request 🎉
 
 ---
 
-## Acknowledgments
+## 🪪 License
 
-- Credit `contributors`, `inspiration`, `references`, etc.
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 💜 Acknowledgments
+
+* Built with ❤️ by **Sarthak Batra** and **Shubhankar Sharma**
+* Powered by **FastAPI**, **LangChain**, **Streamlit**, and **OpenAI**
+
+---
 
 <div align="right">
 
@@ -434,8 +250,12 @@ Tailorbuy_temp is protected under the [LICENSE](https://choosealicense.com/licen
 
 </div>
 
-
 [back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
 
+```
 
 ---
+
+Would you like me to modify the top section (logo + badges) so it automatically uses your **GitHub repo name and contributors graph** once you tell me your actual GitHub username (e.g., `github.com/sarthakbatra/TailorBuy`)?  
+That will make it fully dynamic and professional.
+```
